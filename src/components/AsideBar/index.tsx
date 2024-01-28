@@ -7,11 +7,6 @@ import PagesIcons from '../PagesIcons'
 
 const Aside = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeElement, setActiveElement] = useState('')
-
-  const handleClick = (element: string) => {
-    setActiveElement(element)
-  }
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen)
