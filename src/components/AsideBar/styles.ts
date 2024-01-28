@@ -42,6 +42,7 @@ export const FilesNavIconsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    cursor: pointer;
   }
 `
 export const PagesIconsContainer = styled.div`
