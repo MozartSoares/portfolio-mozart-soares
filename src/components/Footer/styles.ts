@@ -14,6 +14,7 @@ export const FooterContainer = styled.footer`
     align-items: center;
     justify-content: space-between;
     margin: 0px 8px;
+    color: ${colors.textWhite};
     a {
       color: ${colors.textWhite};
     }
