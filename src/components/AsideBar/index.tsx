@@ -1,39 +1,41 @@
-import { AsideContainer, SimbolsNav } from './styles'
-import { FiGithub } from 'react-icons/fi'
-import { LuFiles } from 'react-icons/lu'
-import { FaCode } from 'react-icons/fa'
-import { CiMail } from 'react-icons/ci'
-import { CgProfile } from 'react-icons/cg'
-import { CiSettings } from 'react-icons/ci'
+import { useState } from 'react'
+import SimbolsNav from '../SimbolsNav'
+import * as S from './styles'
+import { RiArrowDownSLine } from 'react-icons/ri'
+import { MdKeyboardArrowRight } from 'react-icons/md'
+import PagesIcons from '../PagesIcons'
 
 const Aside = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeElement, setActiveElement] = useState('')
+
+  const handleClick = (element: string) => {
+    setActiveElement(element)
+  }
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <AsideContainer>
-      <SimbolsNav>
-        <div>
-          <a href="#home">
-            <LuFiles />
-          </a>
-          <a href="https://github.com/MozartSoares">
-            <FiGithub />
-          </a>
-          <a href="#projects">
-            <FaCode />
-          </a>
-          <a href="#contact">
-            <CiMail />
-          </a>
-        </div>
-        <div>
-          <a href="#about">
-            <CgProfile />
-          </a>
-          <a href="#">
-            <CiSettings />
-          </a>
-        </div>
-      </SimbolsNav>
-    </AsideContainer>
+    <S.AsideContainer>
+      <SimbolsNav />
+      <S.FilesNav>
+        <S.FilesNavTitle>
+          <p>EXPLORER</p>
+          <span>...</span>
+        </S.FilesNavTitle>
+        <S.FilesNavIconsContainer>
+          <div onClick={toggleDropdown}>
+            {isOpen ? <RiArrowDownSLine /> : <MdKeyboardArrowRight />}
+            <p>PORTFOLIO</p>
+          </div>
+          <S.PagesIconsContainer>
+            {isOpen ? <PagesIcons /> : <></>}
+          </S.PagesIconsContainer>
+        </S.FilesNavIconsContainer>
+      </S.FilesNav>
+    </S.AsideContainer>
   )
 }
 

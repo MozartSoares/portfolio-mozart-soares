@@ -1,36 +1,65 @@
 import styled from 'styled-components'
 import { colors } from '../../GlobalStyles'
-import { darken } from 'polished'
+import { darken, lighten } from 'polished'
 
 export const AsideContainer = styled.aside`
   background-color: ${colors.asideColor};
   height: 94vh;
-  max-width: 20%;
+  max-width: 15%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
 `
 
-export const SimbolsNav = styled.nav`
+export const FilesNav = styled.nav`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  height: 100%;
-  width: 20%;
+`
+export const FilesNavTitle = styled.div`
+  width: 100%;
   background-color: ${colors.backgroundMain};
+  color: ${colors.iconColor};
+  height: 37px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 16px;
+
+  span {
+    cursor: pointer;
+  }
+`
+export const FilesNavIconsContainer = styled.div`
+  width: 100%;
+  color: ${colors.textWhite};
+  margin-top: 12px;
+  font-size: 14px;
+  padding: 8px;
 
   div {
-    width: 100%;
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: ${colors.iconColor};
-      width: 100%;
-      padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+`
+export const PagesIconsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  width: 100%;
 
-      &:hover {
-        background-color: ${darken(0.2, colors.backgroundMain)};
-      }
+  div {
+    max-width: 234px;
+
+    &:hover {
+      background-color: ${lighten(0.05, colors.asideColor)};
+    }
+
+    .is-active {
+      background-color: ${lighten(0.05, colors.asideColor)};
     }
   }
 `
+//  ${darken(0.03, colors.asideColor)}
