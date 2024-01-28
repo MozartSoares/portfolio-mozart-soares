@@ -6,7 +6,10 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <div>
-        <a href="https://github.com/MozartSoares/portfolio-mozart-soares">
+        <a
+          title="Clique aqui para visualizar o repositório desse portfólio =)"
+          href="https://github.com/MozartSoares/portfolio-mozart-soares"
+        >
           <IoIosGitBranch />
           main
         </a>
