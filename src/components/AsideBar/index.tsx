@@ -4,9 +4,10 @@ import * as S from './styles'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import PagesIcons from '../PagesIcons'
+import { useLocation } from 'react-router-dom'
 
 const Aside = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen)
@@ -25,9 +26,9 @@ const Aside = () => {
             {isOpen ? <RiArrowDownSLine /> : <MdKeyboardArrowRight />}
             <p>PORTFOLIO</p>
           </div>
-          <S.PagesIconsContainer>
+          <S.PageIconsContainer>
             {isOpen ? <PagesIcons /> : <></>}
-          </S.PagesIconsContainer>
+          </S.PageIconsContainer>
         </S.FilesNavIconsContainer>
       </S.FilesNav>
     </S.AsideContainer>

@@ -13,6 +13,11 @@ export const SimbolsNavContainer = styled.nav`
 
   div {
     width: 100%;
+
+    .is-active {
+      border-left: 2px solid ${colors.iconHoverColor};
+    }
+
     a {
       display: flex;
       align-items: center;

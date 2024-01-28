@@ -5,28 +5,43 @@ import { CiMail } from 'react-icons/ci'
 import { CgProfile } from 'react-icons/cg'
 import { CiSettings } from 'react-icons/ci'
 import { SimbolsNavContainer } from './styles'
+import { Link, useLocation } from 'react-router-dom'
 
 const SimbolsNav = () => {
+  const location = useLocation()
+
   return (
     <SimbolsNavContainer>
       <div>
-        <a href="#home">
+        <Link
+          to="/"
+          className={`element ${location.pathname === '/' ? 'is-active' : ''}`}
+        >
           <LuFiles />
-        </a>
+        </Link>
         <a href="https://github.com/MozartSoares">
           <FiGithub />
         </a>
-        <a href="#projects">
+        <Link
+          to="/projects"
+          className={`element ${location.pathname === '/projects' ? 'is-active' : ''}`}
+        >
           <FaCode />
-        </a>
-        <a href="#contact">
+        </Link>
+        <Link
+          to="/contact"
+          className={`element ${location.pathname === '/contact' ? 'is-active' : ''}`}
+        >
           <CiMail />
-        </a>
+        </Link>
       </div>
       <div>
-        <a href="#about">
+        <Link
+          to="/about"
+          className={`element ${location.pathname === '/about' ? 'is-active' : ''}`}
+        >
           <CgProfile />
-        </a>
+        </Link>
         <a href="#">
           <CiSettings />
         </a>

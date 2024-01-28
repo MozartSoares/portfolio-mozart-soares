@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { colors } from '../../GlobalStyles'
-import { darken, lighten } from 'polished'
+import { lighten } from 'polished'
+import { PageIcons } from '../PagesIcons/styles'
 
 export const AsideContainer = styled.aside`
   background-color: ${colors.asideColor};
@@ -45,14 +47,18 @@ export const FilesNavIconsContainer = styled.div`
     cursor: pointer;
   }
 `
-export const PagesIconsContainer = styled.div`
+export const PageIconsContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: ce;
   margin-top: 8px;
   width: 100%;
 
-  div {
+  ${PageIcons} {
     max-width: 234px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 
     &:hover {
       background-color: ${lighten(0.05, colors.asideColor)};
@@ -63,4 +69,3 @@ export const PagesIconsContainer = styled.div`
     }
   }
 `
-//  ${darken(0.03, colors.asideColor)}

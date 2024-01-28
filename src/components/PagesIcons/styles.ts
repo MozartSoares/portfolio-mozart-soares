@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { colors } from '../../GlobalStyles'
+import { Link } from 'react-router-dom'
 
-export const PageIconsContainer = styled.div`
+export const PageIcons = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;

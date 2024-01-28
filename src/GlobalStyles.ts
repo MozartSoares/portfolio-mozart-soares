@@ -10,7 +10,10 @@ export const colors = {
   reactBlue: '#00BCD4',
   htmlRed: '#C94624',
   cssBlue: '#42A5F4',
-  jsonYellow: '#FBC02D'
+  jsonYellow: '#FBC02D',
+  gameColor: '#48dbfb',
+  buttonColor: '#48dbfb',
+  iconHoverColor: '#48dbfb'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -25,6 +28,15 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
       background-color: ${colors.backgroundMain};
+    }
+
+    .container {
+      height: 90vh;
+      max-width: 85%;
+      width: 100%;
+      float: right;
+      display: flex;
+      flex-direction: column;
     }
 
   }
