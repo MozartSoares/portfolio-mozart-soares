@@ -50,7 +50,7 @@ export const TypingDiv = styled.div`
       width: 0;
     }
     to {
-      width: 72%;
+      width: 53.5%;
     }
   }
 

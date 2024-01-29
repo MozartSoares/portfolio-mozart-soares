@@ -15,15 +15,15 @@ const About = () => {
             🚀 Sobre Mim
             <br />
             <br />
-            Olá me chamo Mozart 👋, sou um desenvolvedor web focado na criação
-            de projetos com excelência e focados na experiência do usuário, a
-            programação tem sido minha paixão e desde que entrei nessa área
-            automaticamente me identifiquei pois tenho uma paixão natural por
-            resolver desafios e adoro resolver problemas e pensar em novas
-            maneiras e formas acerca do mesmo assunto. atualmente concentrei
-            meus esfroços na área de Front-end mas também estou estudando para
-            atuar como um desenvolvedor versátil desenvolvedor Full-Stack e
-            poder atuar em todas as etapas do processo que tanto amo.
+            Olá, meu nome é Mozart 👋. Sou um desenvolvedor web focado na
+            criação de projetos com excelência e na experiência do usuário. A
+            programação tem sido minha paixão desde que entrei nessa área, pois
+            tenho um interesse natural em resolver desafios. Adoro encontrar
+            soluções para problemas e explorar novas maneiras e abordagens em
+            relação ao mesmo assunto. Atualmente, concentrei meus esforços na
+            área de Front-end, mas também estou estudando tecnologias back-end
+            para me tornar um versátil desenvolvedor Full-Stack, capaz de atuar
+            em todas as etapas do processo que tanto amo.
             <br />
             🛠️ quer saber como eu posso ser útil na sua equipe ?
             <br /> Dê uma olhada na minha aba de

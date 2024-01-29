@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { colors } from '../../GlobalStyles'
 import { lighten } from 'polished'
@@ -59,6 +58,7 @@ export const PageIconsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: start;
+    line-height: 1.5em;
 
     &:hover {
       background-color: ${lighten(0.05, colors.asideColor)};

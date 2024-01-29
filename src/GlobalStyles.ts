@@ -13,7 +13,8 @@ export const colors = {
   jsonYellow: '#FBC02D',
   gameColor: '#48dbfb',
   buttonColor: '#48dbfb',
-  iconHoverColor: '#48dbfb'
+  iconHoverColor: '#48dbfb',
+  mainColor: '#48dbfb'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -22,7 +23,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
-
     text-decoration: none;
     overflow: hidden;
 
@@ -31,7 +31,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .container {
-      height: 90vh;
       max-width: 85%;
       width: 100%;
       float: right;
