@@ -1,3 +1,5 @@
+import ReCAPTCHA from 'react-google-recaptcha'
+
 import {
   ContactContainer,
   FormContainer,
@@ -80,6 +82,7 @@ const Contact = () => {
               rows={10}
             />
           </div>
+          <ReCAPTCHA sitekey="6Lcab2ApAAAAALUYYNHd0UvgIltUmLfD8PbGEVjP" />
           <FormButton>Enviar</FormButton>
         </form>
       </FormContainer>
