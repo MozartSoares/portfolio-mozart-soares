@@ -8,6 +8,14 @@
       {
         "link-name": "off"
       }
-    ]
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "typescript-config/is-valid": "off",
+    "no-inline-styles": "off"
   }
 }
