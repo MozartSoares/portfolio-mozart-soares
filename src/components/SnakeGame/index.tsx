@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useRef, useEffect } from 'react'
 import { useInterval } from './useInterval'
 import {
@@ -12,8 +13,10 @@ import { colors } from '../../GlobalStyles'
 import { GameContainer } from './styles'
 import { GameButton } from '../Buttons/styles'
 
+type CanvasRef = HTMLCanvasElement | null
+
 const SnakeGame = () => {
-  const canvasRef = useRef()
+  const canvasRef = useRef<CanvasRef>()
   const [snake, setSnake] = useState(SNAKE_START)
   const [apple, setApple] = useState(APPLE_START)
   const [dir, setDir] = useState([0, -1])
@@ -90,13 +93,15 @@ const SnakeGame = () => {
   }
 
   useEffect(() => {
-    const context = canvasRef.current.getContext('2d')
-    context.setTransform(SCALE, 0, 0, SCALE, 0, 0)
-    context.clearRect(0, 0, window.innerWidth, window.innerHeight)
-    context.fillStyle = `${colors.gameColor}`
-    snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1))
-    context.fillStyle = `${colors.jsonYellow}`
-    context.fillRect(apple[0], apple[1], 1, 1)
+    if (canvasRef.current) {
+      const context = canvasRef.current.getContext('2d')
+      context.setTransform(SCALE, 0, 0, SCALE, 0, 0)
+      context.clearRect(0, 0, window.innerWidth, window.innerHeight)
+      context.fillStyle = `${colors.gameColor}`
+      snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1))
+      context.fillStyle = `${colors.jsonYellow}`
+      context.fillRect(apple[0], apple[1], 1, 1)
+    }
   }, [snake, apple, gameOver])
 
   return (

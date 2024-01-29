@@ -1,18 +1,15 @@
-// Custom Hook by Dan Abramov
 import { useEffect, useRef } from 'react'
 
 export function useInterval(callback, delay) {
-  const savedCallback = useRef()
+  const savedCallback = useRef(null)
 
-  // Remember the latest callback.
   useEffect(() => {
     savedCallback.current = callback
   }, [callback])
 
-  // Set up the interval.
   useEffect(() => {
     function tick() {
-      if (savedCallback.current !== undefined) {
+      if (savedCallback) {
         return savedCallback.current()
       }
     }

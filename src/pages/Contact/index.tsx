@@ -1,5 +1,3 @@
-import ReCAPTCHA from 'react-google-recaptcha'
-
 import {
   ContactContainer,
   FormContainer,
