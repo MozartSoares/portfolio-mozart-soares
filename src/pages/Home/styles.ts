@@ -26,6 +26,7 @@ export const TextContainer = styled.div`
   }
 
   h6 {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 1.5rem;
     font-weight: 300;
     max-width: 100%;
@@ -41,7 +42,7 @@ export const TypingDiv = styled.div`
   white-space: nowrap;
   letter-spacing: 0.15em;
   animation:
-    typing 3s normal,
+    typing 2s normal,
     blink-caret 0.5s infinite;
 
   @keyframes typing {
@@ -49,7 +50,7 @@ export const TypingDiv = styled.div`
       width: 0;
     }
     to {
-      width: 61%;
+      width: 72%;
     }
   }
 

@@ -145,3 +145,85 @@ export const Button = styled(Link)`
     background: teal;
   }
 `
+export const ButtonCV = styled.a`
+  --b: 2px;
+  --s: 0.45em;
+  --color: ${colors.jsonYellow};
+  padding: 12px;
+  margin-bottom: 20px;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition:
+    0.3s linear,
+    color 0s,
+    background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &:hover,
+  &:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: 0.05em;
+  }
+
+  &:active {
+    background: var(--color);
+    color: ${colors.backgroundMain};
+  }
+`
+export const SkillButton = styled.li`
+  padding: 15px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: ${colors.textWhite};
+  z-index: 1;
+  background: ${colors.backgroundMain};
+  position: relative;
+  font-weight: 700;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: ${colors.textWhite};
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+  }
+
+  &:hover {
+    color: ${colors.backgroundMain};
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+`

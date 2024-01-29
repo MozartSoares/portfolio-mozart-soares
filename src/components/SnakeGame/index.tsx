@@ -95,7 +95,7 @@ const SnakeGame = () => {
     context.clearRect(0, 0, window.innerWidth, window.innerHeight)
     context.fillStyle = `${colors.gameColor}`
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1))
-    context.fillStyle = 'white'
+    context.fillStyle = `${colors.jsonYellow}`
     context.fillRect(apple[0], apple[1], 1, 1)
   }, [snake, apple, gameOver])
 
