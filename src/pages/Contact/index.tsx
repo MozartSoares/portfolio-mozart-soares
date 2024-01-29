@@ -56,7 +56,7 @@ const Contact = () => {
           <input
             type="hidden"
             name="_next"
-            value="https://yourdomain.co/thanks.html"
+            value="https://portfolio-mozart-soares.vercel.app"
           />
           <InputContainer>
             <div>
