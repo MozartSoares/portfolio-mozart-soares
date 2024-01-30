@@ -1,4 +1,5 @@
 import ReCAPTCHA from 'react-google-recaptcha'
+import { useState } from 'react'
 
 import {
   ContactContainer,
@@ -9,6 +10,8 @@ import {
 import { FormButton } from '../../components/Buttons/styles'
 
 const Contact = () => {
+  const [capVal, setCapVal] = useState(null)
+
   return (
     <Wrapper>
       <ContactContainer>
@@ -82,8 +85,11 @@ const Contact = () => {
               rows={10}
             />
           </div>
-          <ReCAPTCHA sitekey="6Lcab2ApAAAAALUYYNHd0UvgIltUmLfD8PbGEVjP" />
-          <FormButton>Enviar</FormButton>
+          <ReCAPTCHA
+            onChange={(e) => setCapVal(e)}
+            sitekey="6Lcab2ApAAAAALUYYNHd0UvgIltUmLfD8PbGEVjP"
+          />
+          <FormButton disabled={!capVal}>Enviar</FormButton>
         </form>
       </FormContainer>
     </Wrapper>

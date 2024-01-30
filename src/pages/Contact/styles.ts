@@ -95,12 +95,12 @@ export const FormContainer = styled.div`
       margin-bottom: 0.5rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-size: large.8rem;
+      font-size: 0.8rem;
     }
 
     input,
     textarea {
-      border: 1px solid transparent;
+      border: 2px solid transparent;
       margin-bottom: 1.5rem;
       font-size: 1rem;
       padding: 0.75rem;

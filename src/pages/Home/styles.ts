@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import { colors } from '../../GlobalStyles'
 
 export const MainContainer = styled.main`
-  height: 100%;
+  max-width: 80%;
   width: 100%;
+  margin: 5rem auto;
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 `
 export const TextContainer = styled.div`
   display: flex;
@@ -33,24 +33,27 @@ export const TextContainer = styled.div`
   }
 
   p {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 1rem;
   }
 `
 export const TypingDiv = styled.div`
   overflow: hidden;
+  display: flex;
   border-right: 0.15em solid orange;
   white-space: nowrap;
   letter-spacing: 0.15em;
   animation:
-    typing 2s normal,
+    typing 2s ease-in-out,
     blink-caret 0.5s infinite;
+  font-family: 'JetBrains Mono', monospace;
 
   @keyframes typing {
     from {
       width: 0;
     }
     to {
-      width: 53.5%;
+      width: 100%;
     }
   }
 
@@ -65,17 +68,9 @@ export const TypingDiv = styled.div`
   }
 `
 
-export const MainContentContainer = styled.div`
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-
 export const ButtonDiv = styled.div`
   display: flex;
-  margin-top: 32px;
+  margin-top: 2rem;
   width: 100%;
   justify-content: space-evenly;
 `
