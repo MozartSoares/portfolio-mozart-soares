@@ -1,3 +1,21 @@
+
+
+Olá! Apresento meu portfólio, inspirado na experiência do VScode.
+
+Desenvolvido com React, meu portfólio se integra dinamicamente à API do GitHub, utilizando filtragem por tópicos para exibir projetos específicos e utilizando também um algoritmo para sortear os repositórios com base na quantidade de estrelas, assim eliminando a necessidade de atualizações manuais e garantindo uma organização adequada por relevância.
+
+Para garantir uma navegação suave, adotei o react-router-dom, permitindo transições fluidas entre as seções, sem carregamentos desnecessários.
+
+Destaco, ainda, o elemento canvas no herói principal, onde você encontrará um divertido jogo da snake. Utilize as teclas de seta para participar dessa interação única!
+
+Destaco a inclusão de um formulário de contato funcional, implementado com fetch AJAX e método POST, proporcionando uma experiência eficiente sem a necessidade de sair da página. Adicionei um captcha usando o react-google-recaptcha para proteger contra spams e bots.
+
+Fique à vontade para compartilhar sugestões ou melhorias!
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
