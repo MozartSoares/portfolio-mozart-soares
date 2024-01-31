@@ -149,15 +149,13 @@ export const ButtonCV = styled.a`
   --b: 2px;
   --s: 0.45em;
   --color: ${colors.jsonYellow};
-  padding: 12px;
-  margin-bottom: 20px;
 
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
   background: conic-gradient(
       from 90deg at var(--b) var(--b),
-      #0000 90deg,
+      transparent 90deg,
       var(--color) 0
     )
     var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
@@ -166,7 +164,7 @@ export const ButtonCV = styled.a`
     0.3s linear,
     color 0s,
     background-color 0s;
-  outline: var(--b) solid #0000;
+  outline: var(--b) solid transparent;
   outline-offset: 0.6em;
   font-size: 16px;
 

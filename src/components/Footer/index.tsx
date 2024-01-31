@@ -9,6 +9,8 @@ export const Footer = () => {
         <a
           title="Clique aqui para visualizar o repositório desse portfólio =)"
           href="https://github.com/MozartSoares/portfolio-mozart-soares"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <IoIosGitBranch />
           main

@@ -85,6 +85,9 @@ export const ContactContainer = styled.div`
 export const FormContainer = styled.div`
   font-size: 1.2rem;
 
+  p {
+  }
+
   form {
     display: grid;
     row-gap: 0.5em;

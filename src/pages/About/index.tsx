@@ -25,7 +25,7 @@ const About = () => {
             para me tornar um versátil desenvolvedor Full-Stack, capaz de atuar
             em todas as etapas do processo que tanto amo.
             <br />
-            🛠️ quer saber como eu posso ser útil na sua equipe ?
+            🛠️ quer saber como eu posso ser útil e contribuir para seu projeto ?
             <br /> Dê uma olhada na minha aba de
             <Link to={'/projects'}>
               <span> projetos </span>
@@ -52,6 +52,7 @@ const About = () => {
             <SkillButton>Git</SkillButton>
             <SkillButton>Github</SkillButton>
             <SkillButton>NPM</SkillButton>
+            <SkillButton>Bootstrap</SkillButton>
             <SkillButton>Jest</SkillButton>
             <SkillButton>Cypress</SkillButton>
             <SkillButton>Testes </SkillButton>

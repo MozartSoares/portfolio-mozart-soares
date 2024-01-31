@@ -11,6 +11,50 @@ import { FormButton } from '../../components/Buttons/styles'
 
 const Contact = () => {
   const [capVal, setCapVal] = useState(null)
+  const [submissionStatus, setSubmissionStatus] = useState(null)
+  const [displayMessage, setDisplayMessage] = useState(false)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const form = e.target
+    const formData = new FormData(form)
+
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/mozartarmstrong@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: formData
+        }
+      )
+
+      if (response.ok) {
+        setSubmissionStatus('success')
+        form.reset()
+      } else {
+        setSubmissionStatus('error')
+      }
+
+      setDisplayMessage(true)
+
+      setTimeout(() => {
+        setDisplayMessage(false)
+      }, 10000)
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmissionStatus('error')
+      setDisplayMessage(true)
+
+      setTimeout(() => {
+        setDisplayMessage(false)
+      }, 10000)
+    }
+  }
 
   return (
     <Wrapper>
@@ -52,8 +96,9 @@ const Contact = () => {
       <FormContainer>
         <h3>Ou Entre Em Contato Por Aqui</h3>
         <form
-          action="https://formsubmit.co/mozartarmstrong@gmail.com"
+          action="https://formsubmit.co/ajax/mozartarmstrong@gmail.com"
           method="POST"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="_captcha" value="false" />
           <input
@@ -85,11 +130,26 @@ const Contact = () => {
               rows={10}
             />
           </div>
+          {displayMessage && (
+            <>
+              {submissionStatus === 'success' && (
+                <p style={{ color: 'green' }}>Mensagem enviada com sucesso!</p>
+              )}
+              {submissionStatus === 'error' && (
+                <p style={{ color: 'red' }}>
+                  Erro ao enviar mensagem, tente novamente.
+                </p>
+              )}
+            </>
+          )}
           <ReCAPTCHA
-            onChange={(e) => setCapVal(e)}
+            onChange={(e: string) => setCapVal(e)}
             sitekey="6Lcab2ApAAAAALUYYNHd0UvgIltUmLfD8PbGEVjP"
           />
-          <FormButton disabled={!capVal}>Enviar</FormButton>
+
+          <FormButton type="submit" disabled={!capVal}>
+            Enviar
+          </FormButton>
         </form>
       </FormContainer>
     </Wrapper>

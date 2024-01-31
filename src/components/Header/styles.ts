@@ -12,6 +12,6 @@ export const HeaderContainer = styled.header`
 
   .is-active {
     background-color: ${colors.backgroundTitleBar};
-    border-bottom: 1px solid ${colors.textWhite};
+    border-bottom: 2px solid ${colors.mainColor};
   }
 `

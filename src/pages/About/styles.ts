@@ -9,8 +9,7 @@ export const FotoPerfil = styled.img`
 
 export const OverflowContainer = styled.div`
   overflow-y: scroll;
-  height: 85vh;
-
+  max-height: 90vh;
   &::-webkit-scrollbar {
     color: ${colors.iconColor};
   }
@@ -29,7 +28,7 @@ export const ProfileContainer = styled.main`
   }
 
   a {
-    padding-bottom: 8px;
+    margin-bottom: 0.6rem;
   }
 
   p {

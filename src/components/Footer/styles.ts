@@ -5,9 +5,12 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3vh;
+  min-height: 3vh;
+  height: 100%;
   font-family: 'source sans';
   font-size: 16px;
+  z-index: 2;
+  min-width: 100%;
 
   div {
     display: flex;

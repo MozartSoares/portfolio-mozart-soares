@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     overflow: hidden;
 
+
     body {
       background-color: ${colors.backgroundMain};
     }

@@ -19,7 +19,11 @@ const SimbolsNav = () => {
         >
           <LuFiles />
         </Link>
-        <a href="https://github.com/MozartSoares">
+        <a
+          href="https://github.com/MozartSoares"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FiGithub />
         </a>
         <Link
