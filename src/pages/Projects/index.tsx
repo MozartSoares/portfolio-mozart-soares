@@ -2,14 +2,12 @@ import { useEffect, useState } from 'react'
 import ProjectCard from '../../components/ProjectCard'
 import * as S from './styles'
 
-// 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 token
-
 const Projects = () => {
   const [repos, setRepos] = useState([])
-  //github.com/stars/MozartSoares/lists/portfoliorepos
+
   useEffect(() => {
     const headers = {
-      Authorization: `Token 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`
+      Authorization: `Token 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`
     }
     const url =
       'https://api.github.com/search/repositories?q=user:MozartSoares+topic:portfolio'
