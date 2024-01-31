@@ -1,19 +1,22 @@
-Olá! Apresento meu portfólio, inspirado na experiência do VScode.
+# Olá! Bem-vindo ao meu Portfólio 🚀
 
-![Preview](https://private-user-images.githubusercontent.com/142760312/301278740-36eb1e4d-f783-4fa4-84a1-2bcf5dda2dd5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY3Mjg3MTIsIm5iZiI6MTcwNjcyODQxMiwicGF0aCI6Ii8xNDI3NjAzMTIvMzAxMjc4NzQwLTM2ZWIxZTRkLWY3ODMtNGZhNC04NGExLTJiY2Y1ZGRhMmRkNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEzMVQxOTEzMzJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yYmJlYTIzYjYyODRhMGQ4MWRlYzQzYjZhZDhiZmI0MTIzN2IwMDhlMDMwNjNlZGRiN2I1NDQ3NDNkZGNlODM2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.uMDItnNQbp_E-MPaCy7wxWW03sCwAeCzOth2ef3AZ8o)
+## Visão Geral
 
-Desenvolvido com React, meu portfólio se integra dinamicamente à API do GitHub, utilizando filtragem por tópicos para exibir projetos específicos e utilizando também um algoritmo para sortear os repositórios com base na quantidade de estrelas, assim eliminando a necessidade de atualizações manuais e garantindo uma organização adequada por relevância.
+Meu portfólio é uma expressão inspirada na experiência do VScode. Desenvolvido com React, ele se conecta dinamicamente à API do GitHub, utilizando filtragem por tópicos para destacar projetos específicos. Além disso, um algoritmo inteligente classifica os repositórios com base nas estrelas, eliminando a necessidade de atualizações manuais e garantindo uma organização por relevância.
 
-Para garantir uma navegação suave, adotei o react-router-dom, permitindo transições fluidas entre as seções, sem carregamentos desnecessários.
+## Navegação Suave
 
-Destaco, ainda, o elemento canvas no herói principal, onde você encontrará um divertido jogo da snake. Utilize as teclas de seta para participar dessa interação única!
+Para proporcionar uma experiência de usuário fluida, adotei o `react-router-dom`, permitindo transições suaves entre as seções sem carregamentos desnecessários. Isso permite que os visitantes explorem meu trabalho de forma intuitiva e eficiente.
 
-Destaco a inclusão de um formulário de contato funcional, implementado com fetch AJAX e método POST, proporcionando uma experiência eficiente sem a necessidade de sair da página. Adicionei um captcha usando o react-google-recaptcha para proteger contra spams e bots.
+## Elemento Canvas - Jogo da Snake 🐍
 
-Fique à vontade para compartilhar sugestões ou melhorias!
+Destaco um elemento canvas no herói principal do meu portfólio, onde você pode desfrutar de um divertido jogo da Snake. Use as teclas de seta para participar dessa interação única, adicionando uma pitada de diversão à sua visita.
 
+## Formulário de Contato Funcional 📬
 
+Destaco a inclusão de um formulário de contato totalmente funcional, implementado com `fetch AJAX` e método `POST`. Isso proporciona uma experiência eficiente, permitindo que os visitantes entrem em contato sem a necessidade de sair da página. Para garantir a segurança, integrei um captcha usando o `react-google-recaptcha`, protegendo contra spams e bots.
 
+Sinta-se à vontade para compartilhar suas sugestões ou ideias de melhorias! Seu feedback é valioso. 🌟
 
 
 # React + TypeScript + Vite
