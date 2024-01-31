@@ -25,10 +25,6 @@ const Contact = () => {
         'https://formsubmit.co/ajax/mozartarmstrong@gmail.com',
         {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json'
-          },
           body: formData
         }
       )
@@ -68,23 +64,37 @@ const Contact = () => {
           </div>
           <li>
             <p>linkedin: </p>
-            <a href="www.linkedin.com/in/mozart-soares">Mozart Soares</a>
+            <a
+              href="https://www.linkedin.com/in/mozart-soares"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Mozart Soares
+            </a>
           </li>
           <li>
             <p>instagram: </p>
-            <a href="https://www.instagram.com/zart._.abs?igsh=d2Vtd2oyZm1meW9z">
+            <a
+              href="https://www.instagram.com/zart._.abs?igsh=d2Vtd2oyZm1meW9z"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Zart_abs
             </a>
           </li>
           <li>
             <p>github: </p>
-            <a href="https://github.com/MozartSoares">MozartSoares</a>
+            <a
+              href="https://github.com/MozartSoares"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MozartSoares
+            </a>
           </li>
           <li>
             <p>email: </p>
-            <a href="mailto:mozartarmstrong@gmail.com">
-              mozartarmstrong@gmail.com
-            </a>
+            <a href="#">mozartarmstrong@gmail.com</a>
           </li>
           <li>
             <p>whatsapp: </p>
@@ -95,17 +105,8 @@ const Contact = () => {
       </ContactContainer>
       <FormContainer>
         <h3>Ou Entre Em Contato Por Aqui</h3>
-        <form
-          action="https://formsubmit.co/ajax/mozartarmstrong@gmail.com"
-          method="POST"
-          onSubmit={handleSubmit}
-        >
+        <form onSubmit={handleSubmit} method="POST">
           <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://portfolio-mozart-soares.vercel.app"
-          />
           <InputContainer>
             <div>
               <label htmlFor="name">nome</label>
