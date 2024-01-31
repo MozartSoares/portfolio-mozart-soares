@@ -14,7 +14,7 @@ type Props = {
 
 const ProjectCard = ({
   description,
-  image,
+  // image,
   languagesLink,
   name,
   repoLink,
