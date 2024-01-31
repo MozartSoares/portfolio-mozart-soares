@@ -8,9 +8,9 @@ Meu portfólio é uma expressão inspirada na experiência do VScode. Desenvolvi
 
 Para proporcionar uma experiência de usuário fluida, adotei o `react-router-dom`, permitindo transições suaves entre as seções sem carregamentos desnecessários. Isso permite que os visitantes explorem meu trabalho de forma intuitiva e eficiente.
 
-## Elemento Canvas - Jogo da Snake 🐍
+## Elemento Canvas - Jogo da Snake 🐍 ( momentaneamente não disponível em dispositivos móveis (touchscreen) )
 
-Destaco um elemento canvas no herói principal do meu portfólio, onde você pode desfrutar de um divertido jogo da Snake. Use as teclas de seta para participar dessa interação única, adicionando uma pitada de diversão à sua visita.
+Destaco um elemento canvas no hero principal do meu portfólio, onde você pode desfrutar de um divertido jogo da Snake. Use as teclas de seta ou awsd para participar dessa interação única, adicionando uma pitada de diversão à sua visita.
 
 ## Formulário de Contato Funcional 📬
 
