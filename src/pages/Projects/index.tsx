@@ -5,9 +5,11 @@ import * as S from './styles'
 const Projects = () => {
   const [repos, setRepos] = useState([])
 
+  const token = import.meta.env.VITE_GITHUB_TOKEN
+
   useEffect(() => {
     const headers = {
-      Authorization: `Token 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`
+      Authorization: `Bearer ${token}`
     }
     const url =
       'https://api.github.com/search/repositories?q=user:MozartSoares+topic:portfolio'
@@ -25,8 +27,8 @@ const Projects = () => {
         setRepos(sortedRepos)
         console.log(resJson)
       })
-  }, [])
-  // stargazers_count: 1 = stars
+  }, [token])
+
   return (
     <S.OverflowContainer>
       <S.Wrapper>
