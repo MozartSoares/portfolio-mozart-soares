@@ -23,8 +23,9 @@ const ProjectCard = ({
   const [languageTags, setLanguageTags] = useState<string[]>([])
 
   useEffect(() => {
+    const token = import.meta.env.VITE_GITHUB_TOKEN
     const headers = {
-      Authorization: `Token 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`
+      Authorization: `Bearer ${token}`
     }
     const url = languagesLink
     fetch(url, {
