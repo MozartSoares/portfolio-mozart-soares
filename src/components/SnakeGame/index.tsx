@@ -7,7 +7,8 @@ import {
   APPLE_START,
   SCALE,
   SPEED,
-  DIRECTIONS
+  DIRECTIONS,
+  AWSD_DIRECTIONS
 } from './constants'
 import { colors } from '../../GlobalStyles'
 import { GameContainer } from './styles'
@@ -31,18 +32,47 @@ const SnakeGame = () => {
   }
 
   const moveSnake = ({ keyCode }) => {
-    if (
-      (keyCode < 37 && keyCode > 40) ||
-      dir[1] === DIRECTIONS[keyCode][1] + 2 ||
-      dir[1] === DIRECTIONS[keyCode][1] - 2 ||
-      dir[0] === DIRECTIONS[keyCode][0] + 2 ||
-      dir[0] === DIRECTIONS[keyCode][0] - 2
-    )
+    const arrowKeys = [37, 38, 39, 40]
+    const awsdMappings = { 65: 37, 87: 38, 83: 40, 68: 39 }
+
+    if (arrowKeys.includes(keyCode)) {
+      if (keyCode < 37 || keyCode > 40) {
+        return false
+      }
+
+      if (
+        dir[1] === DIRECTIONS[keyCode]?.[1] + 2 ||
+        dir[1] === DIRECTIONS[keyCode]?.[1] - 2 ||
+        dir[0] === DIRECTIONS[keyCode]?.[0] + 2 ||
+        dir[0] === DIRECTIONS[keyCode]?.[0] - 2
+      ) {
+        return false
+      }
+    } else if (awsdMappings[keyCode]) {
+      const arrowKeyCode = awsdMappings[keyCode]
+
+      if (
+        dir[1] === DIRECTIONS[arrowKeyCode]?.[1] + 2 ||
+        dir[1] === DIRECTIONS[arrowKeyCode]?.[1] - 2 ||
+        dir[0] === DIRECTIONS[arrowKeyCode]?.[0] + 2 ||
+        dir[0] === DIRECTIONS[arrowKeyCode]?.[0] - 2
+      ) {
+        return false
+      }
+    } else {
       return false
-    else {
-      setDir(DIRECTIONS[keyCode])
+    }
+
+    const newDirection = arrowKeys.includes(keyCode)
+      ? DIRECTIONS[keyCode]
+      : DIRECTIONS[awsdMappings[keyCode]]
+
+    if (newDirection) {
+      setDir(newDirection)
       return true
     }
+
+    return false
   }
 
   const createApple = () =>
@@ -110,12 +140,14 @@ const SnakeGame = () => {
         <GameButton onClick={startGame}>
           {gameOver ? 'Reiniciar' : 'Jogar'}
         </GameButton>
-        <canvas
-          style={{ border: `1px solid ${colors.gameColor}` }}
-          ref={canvasRef}
-          width={`${CANVAS_SIZE[0]}px`}
-          height={`${CANVAS_SIZE[1]}px`}
-        />
+        <div>
+          <canvas
+            style={{ border: `1px solid ${colors.gameColor}` }}
+            ref={canvasRef}
+            width={`${CANVAS_SIZE[0]}px`}
+            height={`${CANVAS_SIZE[1]}px`}
+          />
+        </div>
       </GameContainer>
     </div>
   )

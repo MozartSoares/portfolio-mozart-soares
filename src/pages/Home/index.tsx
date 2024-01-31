@@ -12,6 +12,9 @@ const Home = () => {
         </h6>
         <p>
           Olá, me chamo Mozart e posso ser o próximo desenvolvedor da sua equipe
+          <br />
+          <br />
+          Clique em jogar e mova-se com AWSD ou ← ↑ ↓ →
         </p>
         <S.ButtonDiv>
           <Button to="/projects">

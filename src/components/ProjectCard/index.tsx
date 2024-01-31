@@ -8,13 +8,13 @@ type Props = {
   languagesLink: string
   repoLink: string
   vercelLink?: string
-  image: string
+  image?: string
   stars?: number
 }
 
 const ProjectCard = ({
   description,
-  // image,
+  image,
   languagesLink,
   name,
   repoLink,
@@ -39,11 +39,10 @@ const ProjectCard = ({
           setLanguageTags(languagesArray)
         }
       })
-  }, [languageTags, languagesLink])
-
+  }, [languagesLink])
   return (
     <S.Card>
-      <img src={'https://via.placeholder.com/100x100'} alt={'foto'} />
+      <img src={image} alt={`Preview do projeto ${name}`} />
       <S.Content>
         <h3>{name}</h3>
         <p>{description}</p>

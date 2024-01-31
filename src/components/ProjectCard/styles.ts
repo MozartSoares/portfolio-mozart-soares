@@ -19,10 +19,12 @@ export const Card = styled.div`
   }
 
   img {
+    object-fit: cover;
     background-color: ${colors.backgroundMain};
     height: 100%;
     width: 100%;
     border-radius: 6px 6px 0 0;
+    cursor: auto;
   }
 `
 export const Content = styled.div`
@@ -35,7 +37,7 @@ export const Content = styled.div`
 
   p {
     overflow-y: auto;
-    min-height: 80px;
+    max-height: 70px;
     height: 100%;
     font-size: 0.8rem;
     margin-top: 0.5rem;

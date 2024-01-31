@@ -19,13 +19,42 @@ const Projects = () => {
     })
       .then((res) => res.json())
       .then((resJson) => {
-        const sortedRepos = resJson.items.sort((a, b) => {
-          if (b.pinned && !a.pinned) return 1
-          if (a.pinned && !b.pinned) return -1
-          return b.stargazers_count - a.stargazers_count
-        })
-        setRepos(sortedRepos)
-        console.log(resJson)
+        const sortedReposByStars = resJson.items.sort(
+          (a, b) => b.stargazers_count - a.stargazers_count
+        )
+        const fetchImageUrl = (repo) => {
+          if (repo.open_issues_count > 0) {
+            return fetch(
+              `https://api.github.com/repos/${repo.full_name}/issues/1/comments`,
+              {
+                headers: headers
+              }
+            )
+              .then((res) => res.json())
+              .then((resJson) => {
+                const imageUrl = resJson[0].body
+                if (imageUrl) {
+                  return {
+                    ...repo,
+                    imageUrl: imageUrl
+                  }
+                } else {
+                  return repo
+                }
+              })
+          } else {
+            return Promise.resolve(repo)
+          }
+        }
+        const promises = sortedReposByStars.map((repo) => fetchImageUrl(repo))
+        Promise.all(promises)
+          .then((updatedRepos) => {
+            console.log(updatedRepos)
+            setRepos(updatedRepos)
+          })
+          .catch((error) => {
+            console.error('Error fetching image URLs:', error)
+          })
       })
   }, [token])
 
@@ -35,16 +64,19 @@ const Projects = () => {
         <h1>{}</h1>
         <p>projetos</p>
         <S.ProjectsContainer>
+          <img src={''} alt="" />
           {repos.map((repo) => (
             <li key={repo.id}>
-              <ProjectCard
-                name={repo.name}
-                description={repo.description}
-                languagesLink={repo.languages_url}
-                repoLink={repo.html_url}
-                vercelLink={repo.homepage}
-                image={''}
-              />
+              {repo.name ? (
+                <ProjectCard
+                  name={repo.name}
+                  description={repo.description}
+                  languagesLink={repo.languages_url}
+                  repoLink={repo.html_url}
+                  vercelLink={repo.homepage}
+                  image={repo.imageUrl || ''}
+                />
+              ) : null}
             </li>
           ))}
         </S.ProjectsContainer>
