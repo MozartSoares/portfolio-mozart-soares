@@ -28,6 +28,18 @@ export const ProjectsContainer = styled.ul`
   margin: 1.5rem 0;
   overflow-y: auto;
 
+  @media screen and (max-width: 1400px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+
   a {
     --color: ${colors.mainColor};
     color: ${colors.mainColor};
