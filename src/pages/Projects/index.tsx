@@ -19,8 +19,9 @@ const Projects = () => {
     })
       .then((res) => res.json())
       .then((resJson) => {
-        const sortedReposByStars = resJson.items.sort(
-          (a, b) => b.stargazers_count - a.stargazers_count
+        const allRepos = resJson.items.sort(
+          (a, b) =>
+            new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
         )
         const fetchImageUrl = async (repo) => {
           try {
@@ -45,7 +46,7 @@ const Projects = () => {
             return repo
           }
         }
-        const promises = sortedReposByStars.map((repo) => fetchImageUrl(repo))
+        const promises = allRepos.map((repo) => fetchImageUrl(repo))
         Promise.all(promises)
           .then((updatedRepos) => {
             console.log(updatedRepos)
