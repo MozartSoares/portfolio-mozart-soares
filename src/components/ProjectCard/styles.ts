@@ -35,7 +35,11 @@ export const Content = styled.div`
   border-radius: 0 20px;
 
   p {
+<<<<<<< HEAD
     max-height: 80px;
+=======
+    max-height: 70px;
+>>>>>>> 643289a5a61f7242e7fc826b10659716cd5767e7
     height: 100%;
     font-size: 0.8rem;
     margin-top: 0.5rem;
