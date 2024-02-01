@@ -7,8 +7,7 @@ import {
   APPLE_START,
   SCALE,
   SPEED,
-  DIRECTIONS,
-  AWSD_DIRECTIONS
+  DIRECTIONS
 } from './constants'
 import { colors } from '../../GlobalStyles'
 import { GameContainer } from './styles'

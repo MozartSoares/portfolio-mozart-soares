@@ -12,19 +12,5 @@ const DIRECTIONS = {
   37: [-1, 0], // left
   39: [1, 0] // right
 }
-const AWSD_DIRECTIONS = {
-  87: [0, -1], // W
-  65: [-1, 0], // A
-  83: [0, 1], // S
-  68: [1, 0] // D
-}
 
-export {
-  CANVAS_SIZE,
-  SNAKE_START,
-  APPLE_START,
-  SCALE,
-  SPEED,
-  DIRECTIONS,
-  AWSD_DIRECTIONS
-}
+export { CANVAS_SIZE, SNAKE_START, APPLE_START, SCALE, SPEED, DIRECTIONS }
