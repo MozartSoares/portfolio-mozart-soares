@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Meu portfólio é uma expressão inspirada na experiência do VScode. Desenvolvido com React, ele se conecta dinamicamente à API do GitHub, utilizando filtragem por tópicos para destacar projetos específicos. Além disso, um algoritmo inteligente classifica os repositórios com base nas estrelas, eliminando a necessidade de atualizações manuais e garantindo uma organização por relevância.
+Meu portfólio é uma expressão inspirada na experiência do VScode. Desenvolvido com React, ele se conecta dinamicamente à API do GitHub, utilizando filtragem por tópicos para destacar projetos específicos. Além disso, um algoritmo que classifica os repositórios com base nas estrelas, eliminando a necessidade de atualizações manuais e garantindo uma organização por relevância.
 
 ## Navegação Suave
 
@@ -15,6 +15,8 @@ Destaco um elemento canvas no hero principal do meu portfólio, onde você pode 
 ## Formulário de Contato Funcional 📬
 
 Destaco a inclusão de um formulário de contato totalmente funcional, implementado com `fetch AJAX` e método `POST`. Isso proporciona uma experiência eficiente, permitindo que os visitantes entrem em contato sem a necessidade de sair da página. Para garantir a segurança, integrei um captcha usando o `react-google-recaptcha`, protegendo contra spams e bots.
+
+![image](https://github.com/MozartSoares/portfolio-mozart-soares/assets/142760312/3650b38f-d508-4ea0-8f01-329327b41289)
 
 Sinta-se à vontade para compartilhar suas sugestões ou ideias de melhorias! Seu feedback é valioso. 🌟
 
