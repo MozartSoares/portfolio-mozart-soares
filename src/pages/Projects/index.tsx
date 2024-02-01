@@ -58,13 +58,18 @@ const Projects = () => {
       })
   }, [token])
 
+  const checkRepoImage = (repo) => {
+    if (repo.name === 'Cartorio_Ebac') {
+      return 'https://i.ibb.co/nDBGg4f/cartorioimage.png'
+    }
+    return repo.imageUrl
+  }
+
   return (
     <S.OverflowContainer>
       <S.Wrapper>
-        <h1>{}</h1>
-        <p>projetos</p>
+        <h2>Projetos</h2>
         <S.ProjectsContainer>
-          <img src={''} alt="" />
           {repos.map((repo) => (
             <li key={repo.id}>
               {repo.name ? (
@@ -74,7 +79,7 @@ const Projects = () => {
                   languagesLink={repo.languages_url}
                   repoLink={repo.html_url}
                   vercelLink={repo.homepage}
-                  image={repo.imageUrl || ''}
+                  image={checkRepoImage(repo)}
                 />
               ) : null}
             </li>

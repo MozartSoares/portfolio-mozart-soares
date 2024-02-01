@@ -8,11 +8,7 @@ export const FotoPerfil = styled.img`
 `
 
 export const OverflowContainer = styled.div`
-  overflow-y: scroll;
   max-height: 90vh;
-  &::-webkit-scrollbar {
-    color: ${colors.iconColor};
-  }
 `
 
 export const ProfileContainer = styled.main`

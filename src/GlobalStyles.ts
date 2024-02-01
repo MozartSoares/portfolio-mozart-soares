@@ -24,7 +24,19 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Source Sans 3', sans-serif;
     text-decoration: none;
-    overflow: hidden;
+    overflow-x: hidden;
+      &::-webkit-scrollbar {
+    width: 3px;
+    background-color: #202020;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 14px;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #202020;
+  }
 
 
     body {

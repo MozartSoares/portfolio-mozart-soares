@@ -12,6 +12,7 @@ export const TitleBarContainer = styled.section`
   height: 30px;
   padding: 8px;
   text-align: center;
+  overflow: hidden;
 
   div {
     display: flex;

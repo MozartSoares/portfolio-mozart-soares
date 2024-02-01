@@ -8,6 +8,7 @@ export const Card = styled.div`
   display: block;
   border-radius: 20px;
   min-height: 100%;
+
   cursor: pointer;
 
   * {
@@ -21,6 +22,8 @@ export const Card = styled.div`
   img {
     object-fit: cover;
     background-color: ${colors.backgroundMain};
+    max-height: 174px;
+    min-width: 338px;
     height: 100%;
     width: 100%;
     border-radius: 6px 6px 0 0;
