@@ -22,7 +22,7 @@ const Projects = () => {
         const sortedReposByStars = resJson.items.sort(
           (a, b) => b.stargazers_count - a.stargazers_count
         )
-        const fetchImageUrl = (repo) => {
+        const fetchImageUrl = async (repo) => {
           if (repo.open_issues_count > 0) {
             return fetch(
               `https://api.github.com/repos/${repo.full_name}/issues/1/comments`,
