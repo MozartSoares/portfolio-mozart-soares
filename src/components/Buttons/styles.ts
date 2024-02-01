@@ -238,6 +238,7 @@ export const FormButton = styled.button`
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  overflow: hidden;
 
   &::after {
     content: '';

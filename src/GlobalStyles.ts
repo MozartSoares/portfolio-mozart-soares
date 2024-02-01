@@ -17,6 +17,12 @@ export const colors = {
   mainColor: '#48dbfb'
 }
 
+export const breakpoints = {
+  mobile: 'max-width: 600px',
+  tablet: 'max-width: 1024px',
+  desktop: 'max-width: 1200px'
+}
+
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -25,6 +31,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Source Sans 3', sans-serif;
     text-decoration: none;
     overflow-x: hidden;
+
       &::-webkit-scrollbar {
     width: 3px;
     background-color: #202020;
@@ -45,10 +52,19 @@ export const GlobalStyle = createGlobalStyle`
 
     .container {
       max-width: 85%;
+      display: grid;
+      flex-direction: column;
       width: 100%;
       float: right;
-      display: flex;
-      flex-direction: column;
+      max-height: 94vh;
+      overflow-y: hidden;
+
+      @media screen and (${breakpoints.tablet}) {
+        max-width: 92vw;
+      }
+      @media screen and (${breakpoints.mobile}) {
+        max-width: 90vw;
+      }
     }
 
   }

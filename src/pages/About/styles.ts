@@ -1,20 +1,18 @@
 import styled from 'styled-components'
-import { colors } from '../../GlobalStyles'
+import { breakpoints, colors } from '../../GlobalStyles'
 
 export const FotoPerfil = styled.img`
-  width: 240px;
-  height: 240px;
+  max-width: 240px;
+  min-height: 240px;
   border-radius: 50%;
 `
 
-export const OverflowContainer = styled.div`
+export const Wrapper = styled.div`
   max-height: 90vh;
 `
 
 export const ProfileContainer = styled.main`
   margin: 20px auto;
-  max-width: 80%;
-  width: 100%;
 
   div {
     display: flex;
@@ -28,7 +26,7 @@ export const ProfileContainer = styled.main`
   }
 
   p {
-    padding: 30px 200px;
+    padding: 30px 60px;
     text-align: center;
     font-family: 'JetBrains Mono', monospace;
     color: ${colors.textWhite};
@@ -37,19 +35,21 @@ export const ProfileContainer = styled.main`
       color: ${colors.jsonYellow};
     }
 
-    @media screen and (max-width: 1050px) {
-      padding: 30px 100px;
+    @media screen and (${breakpoints.mobile}) {
+      padding: 30px 20px;
     }
   }
 `
 export const GridContainer = styled.div`
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
-
   text-align: center;
+
+  @media screen and (${breakpoints.tablet}) {
+    display: block;
+  }
 
   div {
     margin: 0 auto;
@@ -61,7 +61,6 @@ export const GridContainer = styled.div`
     letter-spacing: 0;
     cursor: pointer;
     color: ${colors.textWhite};
-    text-decoration: none;
     font-family: 'JetBrains Mono', monospace;
     -webkit-transition: background-size 0.25s ease-in;
     transition: background-size 0.25s ease-in;
@@ -77,22 +76,24 @@ export const SkillsContainer = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 400px;
-  gap: 8px;
-  padding-bottom: 8px;
+  max-width: 500px;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  @media screen and (${breakpoints.tablet}) {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 `
 export const FormationContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   color: ${colors.textWhite};
 
   ul {
     text-align: left;
-
     text-decoration-color: ${colors.jsonYellow};
 
     li {
-      padding: 8px;
+      padding: 0.5rem;
     }
   }
 
@@ -105,6 +106,6 @@ export const FormationContainer = styled.div`
     color: ${colors.jsonYellow};
     font-weight: bold;
     font-family: 'JetBrains Mono', monospace;
-    padding: 8px;
+    padding: 0.5rem;
   }
 `

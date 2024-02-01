@@ -4,7 +4,7 @@ import { ButtonCV, SkillButton } from '../../components/Buttons/styles'
 
 const About = () => {
   return (
-    <S.OverflowContainer>
+    <S.Wrapper>
       <S.ProfileContainer>
         <div>
           <S.FotoPerfil
@@ -119,7 +119,7 @@ const About = () => {
           </S.FormationContainer>
         </div>
       </S.GridContainer>
-    </S.OverflowContainer>
+    </S.Wrapper>
   )
 }
 

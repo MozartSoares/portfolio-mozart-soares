@@ -7,13 +7,17 @@ export const PageIcons = styled(Link)`
   align-items: center;
   justify-content: center;
   gap: 5px;
-  max-width: 145px;
-  width: 100%;
+  width: 145px;
   height: 100%;
+
   border-bottom: 1px solid transparent;
   cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+
   p {
     font-size: 0.9rem;
     color: ${colors.textWhite};
+    margin: 0;
   }
 `

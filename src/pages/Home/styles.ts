@@ -1,22 +1,45 @@
 import styled from 'styled-components'
-import { colors } from '../../GlobalStyles'
+import { breakpoints, colors } from '../../GlobalStyles'
+
+export const Wrapper = styled.div`
+  max-height: 90vh;
+`
 
 export const MainContainer = styled.main`
-  max-width: 80%;
+  max-width: 95%;
   width: 100%;
   margin: 5rem auto;
+  justify-content: space-evenly;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  .need-keyboard {
+    display: none;
+  }
+
+  @media screen and (max-width: 1380px) {
+    flex-direction: column;
+    row-gap: 5rem;
+  }
+
+  @media screen and (${breakpoints.mobile}) {
+    .need-keyboard {
+      display: block;
+      color: ${colors.mainColor};
+    }
+  }
+
+  span {
+    color: ${colors.jsonYellow};
+  }
 `
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
-  row-gap: 8px;
+  row-gap: 0.5rem;
   color: ${colors.textWhite};
-  height: 80%;
   font-family: 'JetBrains Mono', monospace;
 
   h1 {
@@ -29,16 +52,19 @@ export const TextContainer = styled.div`
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.5rem;
     font-weight: 300;
-    max-width: 100%;
   }
 
   p {
     font-family: 'JetBrains Mono', monospace;
     font-size: 1rem;
+    text-align: left;
+
+    span {
+      font-family: 'JetBrains Mono', monospace;
+    }
   }
 `
 export const TypingDiv = styled.div`
-  overflow: hidden;
   display: flex;
   border-right: 0.15em solid orange;
   white-space: nowrap;
@@ -73,4 +99,11 @@ export const ButtonDiv = styled.div`
   margin-top: 2rem;
   width: 100%;
   justify-content: space-evenly;
+
+  @media screen and (${breakpoints.mobile}) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 2rem;
+  }
 `

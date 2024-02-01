@@ -1,22 +1,26 @@
 import styled from 'styled-components'
-import { colors } from '../../GlobalStyles'
+import { breakpoints, colors } from '../../GlobalStyles'
 
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 32px;
-  max-width: 100%;
+  padding: 2rem;
   margin: 0 auto;
-  color: black;
   gap: 2rem;
-  color: #fff;
+  color: ${colors.textWhite};
+  max-height: 90vh;
+  overflow-y: auto;
+
+  @media screen and (max-width: 1200px) {
+    display: block;
+    margin: 0;
+  }
 
   * {
     font-family: 'JetBrains Mono', monospace;
   }
 
   h3 {
-    font-family: 'JetBrains Mono', monospace;
     font-size: 1.17em;
     font-weight: bold;
     margin-bottom: 1.5rem;
@@ -24,9 +28,19 @@ export const Wrapper = styled.div`
 `
 
 export const ContactContainer = styled.div`
-  border-right: 1px solid ${colors.mainColor};
+  border-right: 2px solid ${colors.mainColor};
   font-size: 1.2rem;
   line-height: 1.8em;
+
+  @media screen and (max-width: 1200px) {
+    border-right: none;
+    padding-bottom: 1rem;
+  }
+
+  @media screen and (${breakpoints.mobile}) {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
 
   ol {
     color: ${colors.textWhite};
@@ -34,9 +48,6 @@ export const ContactContainer = styled.div`
     margin: 0 auto;
 
     div {
-      display: flex;
-      justify-content: start;
-
       p {
         color: ${colors.mainColor};
         span {
@@ -130,6 +141,5 @@ export const FormContainer = styled.div`
 
 export const InputContainer = styled.div`
   display: flex;
-  grid-gap: 1rem;
   gap: 1rem;
 `

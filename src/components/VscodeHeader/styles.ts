@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../GlobalStyles'
+import { breakpoints, colors } from '../../GlobalStyles'
 
 export const TitleBarContainer = styled.section`
   background-color: ${colors.backgroundTitleBar};
@@ -9,29 +9,41 @@ export const TitleBarContainer = styled.section`
   justify-content: space-between;
   font-size: 0.85rem;
   width: 100%;
-  height: 30px;
-  padding: 8px;
+  height: 2.5vh;
+  padding: 0.5rem;
   text-align: center;
   overflow: hidden;
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .texts-container {
+    @media screen and (${breakpoints.tablet}) {
+      display: none;
+    }
+  }
+
+  .only-mobile {
+    display: none;
+    @media screen and (${breakpoints.tablet}) {
+      display: flex;
+      align-items: start;
+    }
+  }
 
   div {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-
-    img {
-      width: 15px;
-      height: 15px;
-    }
 
     p {
-      padding: 0px 8px;
+      padding: 0 0.5rem;
       cursor: pointer;
     }
 
     h1 {
-      margin: 0 auto;
       font-size: 0.85rem;
       font-weight: normal;
       white-space: nowrap;
@@ -48,7 +60,7 @@ export const TitleBarContainer = styled.section`
 export const Circle = styled.span`
   height: 13px;
   width: 13px;
-  margin-left: 8px;
+  margin-left: 0.5rem;
   border-radius: 50%;
   background-color: ${(props) => {
     switch (props.color) {

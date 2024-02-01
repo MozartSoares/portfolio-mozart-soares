@@ -9,7 +9,6 @@ type Props = {
   repoLink: string
   vercelLink?: string
   image?: string
-  stars?: number
 }
 
 const ProjectCard = ({

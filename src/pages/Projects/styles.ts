@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../GlobalStyles'
+import { breakpoints, colors } from '../../GlobalStyles'
 
 export const OverflowContainer = styled.div`
   max-height: 90vh;
@@ -28,15 +28,15 @@ export const ProjectsContainer = styled.ul`
   margin: 1.5rem 0;
   overflow-y: auto;
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1364px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (${breakpoints.tablet}) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and (max-width: 560px) {
+  @media screen and (${breakpoints.mobile}) {
     grid-template-columns: 1fr;
   }
 

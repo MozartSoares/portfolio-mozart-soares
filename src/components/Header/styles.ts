@@ -7,8 +7,12 @@ export const HeaderContainer = styled.header`
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  width: 85%;
   height: 36px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 2px;
+  }
 
   .is-active {
     background-color: ${colors.backgroundTitleBar};

@@ -4,7 +4,10 @@ import VScode from '../../assets/VSicon.png'
 const TitleBar = () => {
   return (
     <S.TitleBarContainer>
-      <div>
+      <div className="only-mobile">
+        <img src={VScode} alt="Visual Studio Code Icon" />
+      </div>
+      <div className="texts-container">
         <img src={VScode} alt="Visual Studio Code Icon" />
         <p>File</p>
         <p>Edit</p>

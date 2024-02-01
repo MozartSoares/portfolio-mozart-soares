@@ -13,8 +13,8 @@ function App() {
       <GlobalStyle />
       <TitleBar />
       <BrowserRouter>
-        <Header />
         <div className="container">
+          <Header />
           <RoutesProvider />
         </div>
         <Aside />
