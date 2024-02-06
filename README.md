@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Meu portfólio é uma expressão inspirada na experiência do VScode. Desenvolvido com React, ele se conecta dinamicamente à API do GitHub, utilizando filtragem por tópicos para destacar projetos específicos. Além disso, um algoritmo que classifica os repositórios com base nas estrelas, eliminando a necessidade de atualizações manuais e garantindo uma organização por relevância.
+Meu portfólio é uma expressão inspirada na experiência do VScode. Desenvolvido com React, ele se conecta dinamicamente à API do GitHub, utilizando filtragem por tópicos para destacar projetos específicos. Além disso, um algoritmo que classifica os repositórios com base na data de lançamento, eliminando a necessidade de atualizações manuais e garantindo uma organização por relevância.
 
 ## Navegação Suave
 
