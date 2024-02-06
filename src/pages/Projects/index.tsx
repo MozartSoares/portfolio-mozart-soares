@@ -81,7 +81,9 @@ const Projects = () => {
                   vercelLink={repo.homepage}
                   image={checkRepoImage(repo)}
                 />
-              ) : null}
+              ) : (
+                <h4>Carregando...</h4>
+              )}
             </li>
           ))}
         </S.ProjectsContainer>
