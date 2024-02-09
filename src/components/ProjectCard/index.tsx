@@ -60,7 +60,7 @@ const ProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver deploy
+              Visualizar Projeto
             </ButtonLink>
           )}
         </S.LinksContainer>
