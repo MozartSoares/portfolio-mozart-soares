@@ -28,6 +28,12 @@ export const ProjectsContainer = styled.ul`
   margin: 1.5rem 0;
   overflow-y: auto;
 
+  h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    color: ${colors.textWhite};
+  }
+
   @media screen and (max-width: 1364px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
