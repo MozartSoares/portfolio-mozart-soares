@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
   .loader-container {
     overflow: none;
 
-    margin-top: 50%;
+    margin-top: 20%;
     height: 100%;
   }
 `
