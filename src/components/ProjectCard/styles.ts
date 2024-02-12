@@ -26,7 +26,7 @@ export const Card = styled.div`
     border-radius: 6px 6px 0 0;
     cursor: auto;
 
-    @media screen and (${breakpoints.mobile}) {
+    @media screen and (${breakpoints.tablet}) {
       max-width: 100%;
     }
   }

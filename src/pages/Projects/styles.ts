@@ -17,6 +17,13 @@ export const Wrapper = styled.div`
     font-size: 2rem;
     color: ${colors.textWhite};
   }
+
+  .loader-container {
+    overflow: none;
+
+    margin-top: 50%;
+    height: 100%;
+  }
 `
 
 export const ProjectsContainer = styled.ul`

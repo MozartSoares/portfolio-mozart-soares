@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import ProjectCard from '../../components/ProjectCard'
 import * as S from './styles'
 
+import Loader from '../../components/Loader'
+
 type Repo = {
   id: number
   name: string
@@ -17,13 +19,7 @@ type Repo = {
   ]
   imageUrl: string
 }
-/*                  name={repo.name}
-                  description={repo.description}
-                  languagesLink={repo.languages_url}
-                  repoLink={repo.html_url}
-                  vercelLink={repo.homepage}
-                  image={checkRepoImage(repo)}
-                />*/
+
 const Projects = () => {
   const [repos, setRepos] = useState<Repo[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
@@ -75,12 +71,13 @@ const Projects = () => {
     <S.OverflowContainer>
       <S.Wrapper>
         <h2>Projetos</h2>
-        <S.ProjectsContainer>
-          {isLoading ? (
-            <h4>carregando...</h4>
-          ) : (
-            repos.map((repo: Repo) => {
-              console.log(repos)
+        {isLoading ? (
+          <div className="loader-container">
+            <Loader size={50} />
+          </div>
+        ) : (
+          <S.ProjectsContainer>
+            {repos.map((repo: Repo) => {
               return (
                 <li key={repo.name}>
                   <ProjectCard
@@ -93,9 +90,9 @@ const Projects = () => {
                   />
                 </li>
               )
-            })
-          )}
-        </S.ProjectsContainer>
+            })}
+          </S.ProjectsContainer>
+        )}
       </S.Wrapper>
     </S.OverflowContainer>
   )
