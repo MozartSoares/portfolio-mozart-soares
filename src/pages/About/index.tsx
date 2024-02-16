@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import * as S from './styles'
-import { ButtonCV, SkillButton } from '../../components/Buttons/styles'
+import { SkillButton } from '../../components/Buttons/styles'
 
 const About = () => {
   return (
