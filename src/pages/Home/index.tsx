@@ -14,21 +14,21 @@ const Home = () => {
           <p>
             Olá, me chamo Mozart e posso ser o próximo desenvolvedor para seus
             projetos
-            <br />
-            <br />
-            <span className="need-keyboard">
-              * Para jogar você precisará de um teclado
-              <br />
-              <br />
+            <br className="invisible-on-mobile" />
+            <br className="invisible-on-mobile" />
+            <span className="invisible-on-mobile">
+              Clique em jogar e mova-se com AWSD ou ← ↑ ↓ →
             </span>
-            <span>Clique em jogar e mova-se com AWSD ou ← ↑ ↓ →</span>
           </p>
           <S.ButtonDiv>
+            <Button className="only-visible-on-mobile" to="/about">
+              <p>Sobre mim 👋</p>
+            </Button>
             <Button to="/projects">
-              <p>Ver Projetos</p>
+              <p>Ver Projetos 🛠️</p>
             </Button>
             <Button to="/contact">
-              <p>Contato</p>
+              <p>Contato 📱</p>
             </Button>
           </S.ButtonDiv>
         </S.TextContainer>

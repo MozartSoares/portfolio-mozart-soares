@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../GlobalStyles'
 
 export const GameContainer = styled.div`
   display: flex;
@@ -6,4 +7,8 @@ export const GameContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+
+  @media screen and (${breakpoints.mobile}) {
+    display: none;
+  }
 `

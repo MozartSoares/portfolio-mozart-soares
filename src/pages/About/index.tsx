@@ -32,7 +32,6 @@ const About = () => {
             </Link>
             onde pude colocar meus aprendizados e esforços em prática
           </p>
-          <ButtonCV href="#">Baixar CV</ButtonCV>
         </div>
       </S.ProfileContainer>
       <S.GridContainer>

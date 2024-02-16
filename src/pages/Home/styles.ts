@@ -13,19 +13,23 @@ export const MainContainer = styled.main`
   display: flex;
   align-items: center;
 
-  .need-keyboard {
-    display: none;
-  }
-
   @media screen and (max-width: 1380px) {
     flex-direction: column;
     row-gap: 5rem;
   }
 
+  .only-visible-on-mobile {
+    display: none;
+  }
+
   @media screen and (${breakpoints.mobile}) {
-    .need-keyboard {
-      display: block;
-      color: ${colors.mainColor};
+    max-width: 85%;
+    margin: 3rem auto;
+    .invisible-on-mobile {
+      display: none;
+    }
+    .only-visible-on-mobile {
+      display: flex;
     }
   }
 
