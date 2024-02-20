@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import * as S from './styles'
 import { ButtonCV, SkillButton } from '../../components/Buttons/styles'
+import curriculum from '../../assets/CV.pdf'
 
 const About = () => {
   return (
@@ -32,7 +33,7 @@ const About = () => {
             </Link>
             onde pude colocar meus aprendizados e esforços em prática
           </p>
-          <ButtonCV href="src\assets\CV.pdf" target="_blank">
+          <ButtonCV href={curriculum} target="_blank">
             Baixar CV
           </ButtonCV>
         </div>
