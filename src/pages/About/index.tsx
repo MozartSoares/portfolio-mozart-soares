@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import * as S from './styles'
-import { SkillButton } from '../../components/Buttons/styles'
+import { ButtonCV, SkillButton } from '../../components/Buttons/styles'
 
 const About = () => {
   return (
@@ -32,6 +32,9 @@ const About = () => {
             </Link>
             onde pude colocar meus aprendizados e esforços em prática
           </p>
+          <ButtonCV href="src\assets\CV.pdf" target="_blank">
+            Baixar CV
+          </ButtonCV>
         </div>
       </S.ProfileContainer>
       <S.GridContainer>
@@ -67,7 +70,7 @@ const About = () => {
           <S.FormationContainer>
             <h2>Formação</h2>
             <p>
-              Adquirí meus conhecimentos através de diversas fontes mas entre
+              Adquiri meus conhecimentos através de diversas fontes mas entre
               elas as mais expressivas para minha evolução foram:
             </p>
             <ul>
