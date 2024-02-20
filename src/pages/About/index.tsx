@@ -34,7 +34,7 @@ const About = () => {
             onde pude colocar meus aprendizados e esforços em prática
           </p>
           <ButtonCV href={curriculum} target="_blank">
-            Baixar CV
+            Visualizar CV
           </ButtonCV>
         </div>
       </S.ProfileContainer>
