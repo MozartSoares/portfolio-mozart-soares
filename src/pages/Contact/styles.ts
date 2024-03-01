@@ -136,10 +136,17 @@ export const FormContainer = styled.div`
         border: 2px solid ${colors.mainColor};
       }
     }
+
+    @media screen and (${breakpoints.mobile}) {
+    }
   }
 `
 
 export const InputContainer = styled.div`
   display: flex;
   gap: 1rem;
+
+  @media screen and (${breakpoints.mobile}) {
+    display: block;
+  }
 `
