@@ -23,7 +23,6 @@ export const MainContainer = styled.main`
   }
 
   @media screen and (${breakpoints.mobile}) {
-    max-width: 85%;
     margin: 3rem auto;
     .invisible-on-mobile {
       display: none;
@@ -65,6 +64,17 @@ export const TextContainer = styled.div`
 
     span {
       font-family: 'JetBrains Mono', monospace;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    max-width: 90%;
+
+    h1 {
+      font-size: 3rem;
+    }
+    h6 {
+      font-size: 1.15rem;
     }
   }
 `

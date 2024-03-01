@@ -137,7 +137,11 @@ export const FormContainer = styled.div`
       }
     }
 
-    @media screen and (${breakpoints.mobile}) {
+    iframe {
+      @media screen and (${breakpoints.mobile}) {
+        max-width: 100%;
+        height: auto;
+      }
     }
   }
 `
