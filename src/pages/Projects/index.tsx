@@ -97,7 +97,7 @@ const Projects = () => {
             <S.ProjectsContainer>
               {repos.map((repo: Repo) => {
                 return (
-                  <li s key={repo.name}>
+                  <li key={repo.name}>
                     <ProjectCard
                       name={repo.name}
                       description={repo.description}
