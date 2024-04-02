@@ -93,7 +93,7 @@ const Projects = () => {
                 </li>
               </ul>
             </S.ProjectsContainer>
-            <hr style="width: 100%;" />
+
             <S.ProjectsContainer>
               {repos.map((repo: Repo) => {
                 return (
