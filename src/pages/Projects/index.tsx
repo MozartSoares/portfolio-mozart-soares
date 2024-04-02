@@ -3,6 +3,7 @@ import ProjectCard from '../../components/ProjectCard'
 import * as S from './styles'
 
 import Loader from '../../components/Loader'
+import { width } from '@fortawesome/free-brands-svg-icons/fa42Group'
 
 type Repo = {
   id: number
@@ -70,28 +71,47 @@ const Projects = () => {
   return (
     <S.OverflowContainer>
       <S.Wrapper>
-        <h2>Projetos</h2>
         {isLoading ? (
           <div className="loader-container">
             <Loader size={50} />
           </div>
         ) : (
-          <S.ProjectsContainer>
-            {repos.map((repo: Repo) => {
-              return (
-                <li key={repo.name}>
+          <>
+            <h2>Projetos Freelancer</h2>
+            <S.ProjectsContainer>
+              <ul>
+                <li>
                   <ProjectCard
-                    name={repo.name}
-                    description={repo.description}
-                    languagesLink={repo.languages_url}
-                    repoLink={repo.html_url}
-                    vercelLink={repo.homepage}
-                    image={repo.imageUrl}
+                    name={'Banco Bet'}
+                    description={'descricao'}
+                    languagesLink={''}
+                    repoLink={''}
+                    vercelLink={''}
+                    image={''}
+                    children="Ver mais detalhes"
                   />
                 </li>
-              )
-            })}
-          </S.ProjectsContainer>
+              </ul>
+            </S.ProjectsContainer>
+
+            <S.ProjectsContainer>
+              {repos.map((repo: Repo) => {
+                return (
+                  <li key={repo.name}>
+                    <ProjectCard
+                      name={repo.name}
+                      description={repo.description}
+                      languagesLink={repo.languages_url}
+                      repoLink={repo.html_url}
+                      vercelLink={repo.homepage}
+                      image={repo.imageUrl}
+                      children="Ver Repositório"
+                    />
+                  </li>
+                )
+              })}
+            </S.ProjectsContainer>
+          </>
         )}
       </S.Wrapper>
     </S.OverflowContainer>
