@@ -32,7 +32,8 @@ export const ProjectsContainer = styled.ul`
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1.5rem;
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
+
   overflow-y: auto;
 
   h4 {
