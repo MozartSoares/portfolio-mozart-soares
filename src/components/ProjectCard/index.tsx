@@ -5,10 +5,11 @@ import * as S from './styles'
 type Props = {
   name: string
   description: string
-  languagesLink: string
+  languagesLink?: string
   repoLink: string
   vercelLink?: string
   image?: string
+  children: string
 }
 
 const ProjectCard = ({
@@ -17,7 +18,8 @@ const ProjectCard = ({
   languagesLink,
   name,
   repoLink,
-  vercelLink
+  vercelLink,
+  children
 }: Props) => {
   const [languageTags, setLanguageTags] = useState<string[]>([])
 
@@ -52,7 +54,7 @@ const ProjectCard = ({
         </ul>
         <S.LinksContainer>
           <ButtonLink href={repoLink} target="_blank" rel="noopener noreferrer">
-            Repositório
+            {children}
           </ButtonLink>
           {vercelLink && (
             <ButtonLink
