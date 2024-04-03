@@ -10,6 +10,7 @@ type Props = {
   vercelLink?: string
   image?: string
   children: string
+  freelance?: boolean
 }
 
 const ProjectCard = ({
@@ -19,7 +20,8 @@ const ProjectCard = ({
   name,
   repoLink,
   vercelLink,
-  children
+  children,
+  freelance
 }: Props) => {
   const [languageTags, setLanguageTags] = useState<string[]>([])
 
@@ -48,6 +50,7 @@ const ProjectCard = ({
         <h3>{name}</h3>
         <p>{description}</p>
         <ul>
+          {freelance && <Tag>Projeto freelancer</Tag>}
           {languageTags.map((language) => (
             <Tag key={language}>{language}</Tag>
           ))}
