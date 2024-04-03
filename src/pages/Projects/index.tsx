@@ -3,7 +3,6 @@ import ProjectCard from '../../components/ProjectCard'
 import * as S from './styles'
 
 import Loader from '../../components/Loader'
-import { width } from '@fortawesome/free-brands-svg-icons/fa42Group'
 
 type Repo = {
   id: number
