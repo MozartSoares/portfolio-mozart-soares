@@ -9,7 +9,7 @@ const Home = () => {
         <S.TextContainer>
           <h1>Mozart Soares</h1>
           <h6>
-            <S.TypingDiv>Desenvolvedor Web</S.TypingDiv>
+            <S.TypingDiv>Desenvolvedor Full Stack</S.TypingDiv>
           </h6>
           <p>
             Olá, me chamo Mozart e posso ser o próximo desenvolvedor para seus

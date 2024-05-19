@@ -16,15 +16,26 @@ const About = () => {
             🚀 Sobre Mim
             <br />
             <br />
-            Olá, meu nome é Mozart 👋. Sou um desenvolvedor web focado na
-            criação de projetos com excelência e na experiência do usuário. A
-            programação tem sido minha paixão desde que entrei nessa área, pois
-            tenho um interesse natural em resolver desafios. Adoro encontrar
-            soluções para problemas e explorar novas maneiras e abordagens em
-            relação ao mesmo assunto. Atualmente, concentrei meus esforços na
-            área de Front-end, mas também estou estudando tecnologias back-end
-            para me tornar um versátil desenvolvedor Full-Stack, capaz de atuar
-            em todas as etapas do processo que tanto amo.
+            Olá, sou Mozart, um desenvolvedor Full Stack apaixonado por criar
+            projetos excepcionais e proporcionar ótimas experiências aos
+            usuários. Minha jornada na programação começou com um interesse
+            intrínseco em resolver desafios, e desde então tenho dedicado meu
+            tempo e energia para aprimorar minhas habilidades em todas as áreas
+            do desenvolvimento web. Com mais de 40 projetos concluídos,
+            incluindo trabalhos pessoais, freelancers e voluntários, acumulei
+            uma ampla experiência e expertise em ambas as frentes: front-end e
+            back-end. Tive o privilégio de liderar equipes de até três
+            desenvolvedores, colaborar diretamente com CEOs de negócios para
+            entender os requisitos do projeto e manter uma comunicação constante
+            com os clientes para garantir sua satisfação. Minhas experiências
+            refletem meu compromisso contínuo com a aprendizagem e aprimoramento
+            profissional. Estou sempre em busca de novas maneiras de superar
+            desafios e aperfeiçoar minhas habilidades. Portanto, estou
+            procurando uma empresa que compartilhe esses valores e me ofereça
+            oportunidades para crescer e expandir meu conhecimento em diferentes
+            áreas. Se você está em busca de um desenvolvedor talentoso,
+            adaptável e comprometido em proporcionar resultados excepcionais,
+            estou pronto para contribuir com o sucesso da sua ideia.
             <br />
             🛠️ quer saber como eu posso ser útil e contribuir para seu projeto ?
             <br /> Dê uma olhada na minha aba de
@@ -47,7 +58,13 @@ const About = () => {
             <SkillButton>JavaScript</SkillButton>
             <SkillButton>Typescript</SkillButton>
             <SkillButton>ReactJS</SkillButton>
+            <SkillButton>Angular</SkillButton>
             <SkillButton>VueJS</SkillButton>
+            <SkillButton>NodeJs</SkillButton>
+            <SkillButton>Python</SkillButton>
+            <SkillButton>Django</SkillButton>
+            <SkillButton>PHP</SkillButton>
+            <SkillButton>Yii2</SkillButton>
             <SkillButton>Integração com API</SkillButton>
             <SkillButton>Jquery</SkillButton>
             <SkillButton>Redux</SkillButton>
@@ -56,8 +73,6 @@ const About = () => {
             <SkillButton>Github</SkillButton>
             <SkillButton>NPM</SkillButton>
             <SkillButton>Bootstrap</SkillButton>
-            <SkillButton>Jest</SkillButton>
-            <SkillButton>Cypress</SkillButton>
             <SkillButton>Testes </SkillButton>
             <SkillButton>Task runners</SkillButton>
             <SkillButton>Gulp</SkillButton>
